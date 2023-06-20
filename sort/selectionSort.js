@@ -3,20 +3,18 @@ const selectionSort = (arr) => {
     [a[idx1], a[idx2]] = [a[idx2], a[idx1]];
   };
 
-  let minValIdx = 0;
-
   for (let i = 0; i < arr.length; i++) {
-    minValIdx = i;
+    let lowest = i;
 
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[minValIdx]) {
-        minValIdx = j;
+      if (arr[j] < arr[lowest]) {
+        lowest = j;
       }
     }
 
     // found a smaller number
-    if (minValIdx > i) {
-      swap(arr, i, minValIdx);
+    if (lowest > i) {
+      swap(arr, i, lowest);
     }
   }
 
