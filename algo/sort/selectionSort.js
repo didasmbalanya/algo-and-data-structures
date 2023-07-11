@@ -3,7 +3,7 @@ const selectionSort = (arr) => {
     [a[idx1], a[idx2]] = [a[idx2], a[idx1]];
   };
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length - 1; i++) {
     let lowest = i;
 
     for (let j = i + 1; j < arr.length; j++) {
@@ -21,6 +21,6 @@ const selectionSort = (arr) => {
   return arr;
 };
 
-console.log("><><><<><<><<>||||| ", selectionSort([2, 35, 1, 5,56]));
+console.log("><><><<><<><<>||||| ", selectionSort([0, 1, 2, 35, 1, 5, 56]));
 
 // selectionSort([2,35,1])
